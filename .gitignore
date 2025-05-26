@@ -9,5 +9,6 @@
 
 # Allow .py
 !**/*.py
+!**/*.sh
 # Allow .gitkeep
 !**/.gitkeep
