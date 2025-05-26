@@ -78,6 +78,7 @@ def verify_cert_chain_local(certs):
   verifier = builder.build_client_verifier()
 
   try:
+    print(cert, chain)
     verifier.verify(cert, chain)
     return True
 

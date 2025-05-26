@@ -11,7 +11,7 @@ for p12_file in *.p12; do
   output_dir=$(basename "$p12_file" .p12)
   mkdir -p "$output_dir"
 
-  openssl pkcs12 -in "$p12_file" -clcerts -nokeys -out "$output_dir/cert.pem" -passin pass:foobar
+  openssl pkcs12 -in "$p12_file" -nokeys -out "$output_dir/cert.pem" -passin pass:foobar
   openssl pkcs12 -in "$p12_file" -nocerts -nodes  -out "$output_dir/key.pem"  -passin pass:foobar
 
   echo "Extracted cert and key to $output_dir"

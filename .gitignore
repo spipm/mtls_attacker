@@ -7,8 +7,9 @@
 !.gitignore
 !readme.md
 
-# Allow .py
+# Allow
 !**/*.py
 !**/*.sh
-# Allow .gitkeep
+
+# .gitkeep
 !**/.gitkeep
