@@ -22,7 +22,7 @@ parse_nmap.py
   - Extract host and ip for open services from nmap results
   - Input: nmap output in XML format. Run with `-n` to preserve hostnames
   - Usage: `./parse_nmap.py input/nmap_output.xml > input/services.txt`
-  - Output: Prints <host> <port> per line
+  - Output: Prints `<host> <port>` per line
 
 inspect_cert.py
   - Show information about a cert / key pair in a dir
@@ -30,13 +30,13 @@ inspect_cert.py
 
 mtls_detect.py
   - Detects if the server requests a client certificate
-  - Input: stdin with <host> <port>
+  - Input: stdin with `<host> <port>`
   - Usage: `cat input/services.txt | ./mtls_detect.py > input/require_certs.txt`
   - Output: Prints <host> <port> per line
 
 mtls_connect_bulk.py
   - Bulk scan to try and connect with user certs. Quits on the first working cert for a host.
-  - Input: stdin with <host> <port>
+  - Input: stdin with `<host> <port>`
   - Usage: `cat input/require_certs.txt | ./mtls_connect_bulk.py`
   - Output: An overview of differences between a regular request (without cert) and one with a working cert
 
