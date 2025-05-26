@@ -12,11 +12,9 @@ This tool is mostly inspired by [this](https://github.blog/security/vulnerabilit
 
 ## Challenge
 
-It's been a challenge to program this for some reason. It hasn't found anything cool yet, but I ran out of time I wanted to spend on this.
+It's been a challenge to program this for some reason. It hasn't found any security issues yet, but I ran out of time I wanted to spend on this.
 
 I first tried to make a script that would do headers, connect, cert appending, cert fuzzing, etc, but it just became too much. If the code looks a bit weird it's because I first wrote it with AI in Python, then I rewrote it in python myself, then tried to make an nmap plugin, then I let AI write parts in bash, then some parts were ported from my first python project to bash with AI, only to let AI convert parts back to python. Finally I made actual design choices with the lessons I learned (like to never write things with AI in the lead) and finally I wrote everything myself.
-
-Certs are quite interesting. There are just so many fields that might be parsed incorrectly, even though in practice most services will only parse a few. Yet in recent years people found many neat vulns, hence this search.
 
 ## Scripts
 
