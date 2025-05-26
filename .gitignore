@@ -1,0 +1,13 @@
+# Ignore everything recursively
+**
+# Unignore directories (without content)
+!*/
+
+# Keep
+!.gitignore
+!readme.md
+
+# Allow .py
+!**/*.py
+# Allow .gitkeep
+!**/.gitkeep
