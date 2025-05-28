@@ -32,7 +32,7 @@ mtls_detect.py
   - Detects if the server requests a client certificate
   - Input: stdin with `<host> <port>`
   - Usage: `cat input/services.txt | ./mtls_detect.py > input/require_certs.txt`
-  - Output: Prints <host> <port> per line
+  - Output: Prints `<host> <port>` per line
 
 mtls_connect_bulk.py
   - Bulk scan to try and connect with user certs. Quits on the first working cert for a host.
@@ -63,7 +63,7 @@ openssl pkcs12 -export -out mycert.p12 -inkey key.pem -in chain.pem -passout pas
 - Run an nmap scan on TLS ports. Use hostnames and use the `-n` option to preserve them.
 - Use `parse_nmap.py` to extract services.
 - Use `mtls_detect.py` or `mtls_connect_bulk.py` to find interesting services you can connect to.
-- Use `mtls_connect_bulk.py` and `mtls_cert_generation.py` to generate certs for a host and test how the server responds to different certs.
+- Use `mtls_connect.py` and `mtls_cert_generation.py` to generate certs for a host and test how the server responds to different certs.
 
 Once you can connect with certs, you can use the generation script to create custom certs, or you can try application-layer vulns, fuzz cert headers, etc.
 
