@@ -188,6 +188,6 @@ def show_cert_info(cert_dir):
         logging.debug(f"\t\t {value}")
 
   except Exception as e:
-    logging.info(f"Failed to parse cert: {e}")
-    logging.info({traceback.format_exc()})
+    logging.warning(f"Failed to parse cert: {e}")
+    logging.warning({traceback.format_exc()})
   
