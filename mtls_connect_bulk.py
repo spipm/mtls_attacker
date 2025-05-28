@@ -60,7 +60,7 @@ def print_first_working_user_cert(host, port):
       response_profile = get_response(user_cert_dir, url)
 
       if response_profile.was_exception:
-        return
+        continue
 
       msg = None
 
